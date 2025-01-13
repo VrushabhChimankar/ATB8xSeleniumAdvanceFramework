@@ -40,7 +40,7 @@ public class SauceLabsDataDrivenTesting {
             //find username and password
             driver.findElement(By.id("user-name")).sendKeys(sheet.getRow(i).getCell(0).toString());
 
-            driver.findElement(By.id("password")).sendKeys(sheet.getRow(1).getCell(1).toString());
+            driver.findElement(By.id("password")).sendKeys(sheet.getRow(i).getCell(1).toString());
 
             driver.findElement(By.id("login-button")).click();
 
