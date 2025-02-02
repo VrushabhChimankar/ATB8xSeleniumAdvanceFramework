@@ -1,4 +1,4 @@
-package ATB8xVrushabh.tests.vwoLogin;
+package ATB8xVrushabh.tests.vwoLogin.PageObjectModel;
 
 import ATB8xVrushabh.base.CommonToAllTest;
 import ATB8xVrushabh.driver.DriverManager;
@@ -27,7 +27,7 @@ public class TestLoginVWO_POM extends CommonToAllTest {
 
     }
 
-   @Description("Verify that successful login with valid cred")
+   @Description("Verify that successful login with valid credentials")
     @Test
     public void testLoginPositiveVWO(){
 
