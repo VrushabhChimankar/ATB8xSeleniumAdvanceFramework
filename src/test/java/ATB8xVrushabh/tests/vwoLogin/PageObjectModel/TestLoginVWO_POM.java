@@ -22,6 +22,7 @@ public class TestLoginVWO_POM extends CommonToAllTest {
         LoginPage_POM loginPagePom = new LoginPage_POM(DriverManager.getDriver());
         String error_message = loginPagePom.testLoginVWONegative(PropertyReader.readKey("invalid_username"), PropertyReader.readKey("invalid_password"));
 
+        System.out.println("Test login negative vwo");
         assertThat(error_message).isNotBlank().isNotNull().isNotEmpty();
         Assert.assertEquals(error_message, PropertyReader.readKey("error_message"));
 
@@ -34,6 +35,7 @@ public class TestLoginVWO_POM extends CommonToAllTest {
         LoginPage_POM loginPagePom = new LoginPage_POM(DriverManager.getDriver());
         loginPagePom.testLoginVWONegative(PropertyReader.readKey("username"), PropertyReader.readKey("password"));
 
+       System.out.println("Test login positive vwo");
         DashboardPage_POM dashboardPagePom = new DashboardPage_POM(DriverManager.getDriver());
         String loginusername = dashboardPagePom.loggedInUserName();
 
